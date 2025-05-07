@@ -7,7 +7,7 @@ const SignIn = () => {
     email: '',
     password: ''
   });
-  
+
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
@@ -20,40 +20,43 @@ const SignIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
+    const { email, password } = formData;
+
     // Simple validation
-    if (!formData.email || !formData.password) {
+    if (!email || !password) {
       setError('Please fill in all fields');
       return;
     }
-    
-    // For demo purposes, we'll simulate a successful login
-    // In a real app, you would call an API to authenticate
-    
-    // Check if there's a user in localStorage (from signup)
-    const storedUser = localStorage.getItem('user');
-    
-    if (storedUser) {
-      const user = JSON.parse(storedUser);
-      
-      // In a real app, you would verify the password
-      // For demo, we'll just check if the email matches
-      if (user.email === formData.email) {
-        localStorage.setItem('isAuthenticated', 'true');
-        navigate('/dashboard');
-        return;
+
+    // Dummy users
+    const dummyUsers = [
+      {
+        email: 'student1@gmail.com',
+        password: 'student1',
+        name: 'Student One',
+        role: 'student'
+      },
+      {
+        email: 'teacher1@gmail.com',
+        password: 'teacher1',
+        name: 'Teacher One',
+        role: 'teacher'
       }
+    ];
+
+    const user = dummyUsers.find(
+      (u) => u.email === email && u.password === password
+    );
+
+    if (user) {
+      // Simulate authentication
+      localStorage.setItem('isAuthenticated', 'true');
+      localStorage.setItem('user', JSON.stringify(user));
+      navigate('/dashboard');
+    } else {
+      setError('Invalid email or password');
     }
-    
-    // For demo purposes, allow any login if no stored user
-    localStorage.setItem('isAuthenticated', 'true');
-    localStorage.setItem('user', JSON.stringify({
-      name: 'Demo User',
-      email: formData.email,
-      role: 'student' // Default role
-    }));
-    
-    navigate('/dashboard');
   };
 
   return (
@@ -63,7 +66,7 @@ const SignIn = () => {
           <h2 className="text-center mb-4">Sign In</h2>
           <h4 className="text-center mb-3">Sunshine Valley School</h4>
           {error && <div className="alert alert-danger">{error}</div>}
-          
+
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">Email address</label>
@@ -77,7 +80,7 @@ const SignIn = () => {
                 required
               />
             </div>
-            
+
             <div className="mb-3">
               <label htmlFor="password" className="form-label">Password</label>
               <input
@@ -90,7 +93,7 @@ const SignIn = () => {
                 required
               />
             </div>
-            
+
             <div className="mb-3 form-check">
               <input
                 type="checkbox"
@@ -99,10 +102,10 @@ const SignIn = () => {
               />
               <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
             </div>
-            
+
             <button type="submit" className="btn btn-primary w-100">Sign In</button>
           </form>
-          
+
           <div className="mt-3 text-center">
             <p>Don't have an account? <Link to="/signup">Sign Up</Link></p>
             <p><Link to="/">Back to Home</Link></p>
