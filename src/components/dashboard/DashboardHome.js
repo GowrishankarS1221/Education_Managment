@@ -7,8 +7,6 @@ const DashboardHome = ({ user }) => {
     switch(user?.role) {
       case 'student':
         return renderStudentDashboard();
-      case 'parent':
-        return renderParentDashboard();
       case 'teacher':
         return renderTeacherDashboard();
       default:
