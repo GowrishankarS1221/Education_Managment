@@ -265,7 +265,7 @@ const DashboardHome = ({ user }) => {
             </div>
           </div>
           
-          // In the student dashboard
+          
           <div className="col-md-4">
             <div className="card mb-4">
               <div className="card-header">
@@ -318,7 +318,6 @@ const DashboardHome = ({ user }) => {
                         <th>Attendance</th>
                         <th>Current Grade</th>
                         <th>Progress</th>
-                        <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
