@@ -282,7 +282,7 @@ const DashboardHome = ({ user }) => {
             </div>
           </div>
           
-          // In the teacher dashboard
+     
           <div className="col-md-4">
             <div className="card mb-4">
               <div className="card-header">
@@ -304,7 +304,7 @@ const DashboardHome = ({ user }) => {
           <div className="col-md-12">
             <div className="card">
               <div className="card-header d-flex justify-content-between align-items-center">
-                <h5 className="mb-0">Student Progress Tracking</h5>
+                
                 <button className="btn btn-sm btn-outline-primary">Export Data</button>
               </div>
               <div className="card-body">
@@ -328,9 +328,7 @@ const DashboardHome = ({ user }) => {
                         <td>98%</td>
                         <td>A</td>
                         <td>
-                          <div className="progress">
-                            <div className="progress-bar bg-success" role="progressbar" style={{width: "92%"}} aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">92%</div>
-                          </div>
+                          
                         </td>
                         <td>
                           <button className="btn btn-sm btn-outline-primary me-1">View</button>
@@ -344,9 +342,7 @@ const DashboardHome = ({ user }) => {
                         <td>95%</td>
                         <td>A-</td>
                         <td>
-                          <div className="progress">
-                            <div className="progress-bar bg-success" role="progressbar" style={{width: "88%"}} aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">88%</div>
-                          </div>
+                          
                         </td>
                         <td>
                           <button className="btn btn-sm btn-outline-primary me-1">View</button>
@@ -360,9 +356,7 @@ const DashboardHome = ({ user }) => {
                         <td>85%</td>
                         <td>B</td>
                         <td>
-                          <div className="progress">
-                            <div className="progress-bar bg-primary" role="progressbar" style={{width: "78%"}} aria-valuenow="78" aria-valuemin="0" aria-valuemax="100">78%</div>
-                          </div>
+                         
                         </td>
                         <td>
                           <button className="btn btn-sm btn-outline-primary me-1">View</button>
@@ -376,9 +370,7 @@ const DashboardHome = ({ user }) => {
                         <td>80%</td>
                         <td>C+</td>
                         <td>
-                          <div className="progress">
-                            <div className="progress-bar bg-warning" role="progressbar" style={{width: "65%"}} aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
-                          </div>
+                         
                         </td>
                         <td>
                           <button className="btn btn-sm btn-outline-primary me-1">View</button>
