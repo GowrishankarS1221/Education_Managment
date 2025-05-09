@@ -318,6 +318,8 @@ const DashboardHome = ({ user }) => {
                         <th>Attendance</th>
                         <th>Current Grade</th>
                         <th>Progress</th>
+                        <th>Actions</th>
+    
                       </tr>
                     </thead>
                     <tbody>
