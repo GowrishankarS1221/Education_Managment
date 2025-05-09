@@ -27,7 +27,7 @@ const LandingPage = () => {
                   <img src={heroImage} alt="Sunshine Valley School" className="img-fluid hero-image" />
                 ) : (
                   <div className="placeholder-image" style={{ 
-                    height: '600px', 
+                    height: '900px', 
                     background: '#f0f0f0', 
                     display: 'flex', 
                     alignItems: 'center', 
