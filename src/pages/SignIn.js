@@ -101,7 +101,8 @@ const SignIn = () => {
                 id="rememberMe"
               />
               <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
-            </div>*/
+            </div>
+            */
 
             <button type="submit" className="btn btn-primary w-100">Sign In</button>
           </form>
