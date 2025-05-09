@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import '../styles/LandingPage.css';
-import heroImage from '../assets/school-hero.jpeg'; // You'll need to add this image to your assets folder
+import heroImage from '../assets/school-hero.jpeg'; 
 
 const LandingPage = () => {
   return (
@@ -27,7 +27,7 @@ const LandingPage = () => {
                   <img src={heroImage} alt="Sunshine Valley School" className="img-fluid hero-image" />
                 ) : (
                   <div className="placeholder-image" style={{ 
-                    height: '400px', 
+                    height: '600px', 
                     background: '#f0f0f0', 
                     display: 'flex', 
                     alignItems: 'center', 
