@@ -146,7 +146,7 @@ const LandingPage = () => {
           <div className="row">
             <div className="col-md-4">
               <h5>Sunshine Valley School</h5>
-              <p>123 Education Lane<br />Sunshine City, SC 12345<br />Phone: (123) 456-7890</p>
+              <p>123 Education Lane<br />Sunshine City, SC 12345<br />Phone: (91) 944-656-7890</p>
             </div>
             <div className="col-md-4">
               <h5>Quick Links</h5>
