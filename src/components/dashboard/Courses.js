@@ -5,7 +5,7 @@ const Courses = () => {
   const [courses, setCourses] = useState([
     {
       id: 1,
-      title: 'Mathematics - Grade 10',
+      title: 'Mathematics ',
       instructor: 'Mrs. Sarah Johnson',
       department: 'Mathematics',
       students: 32,
@@ -13,7 +13,7 @@ const Courses = () => {
     },
     {
       id: 2,
-      title: 'English Literature - Grade 11',
+      title: 'English Literature ',
       instructor: 'Mr. Robert Williams',
       department: 'English',
       students: 28,
@@ -21,7 +21,7 @@ const Courses = () => {
     },
     {
       id: 3,
-      title: 'Physics - Grade 12',
+      title: 'Physics ',
       instructor: 'Dr. Michael Chen',
       department: 'Science',
       students: 24,
@@ -29,7 +29,7 @@ const Courses = () => {
     },
     {
       id: 4,
-      title: 'World History - Grade 9',
+      title: 'World History',
       instructor: 'Ms. Emily Rodriguez',
       department: 'Social Studies',
       students: 35,
@@ -37,7 +37,7 @@ const Courses = () => {
     },
     {
       id: 5,
-      title: 'Computer Science - Grade 11',
+      title: 'Computer Science ',
       instructor: 'Mr. David Kumar',
       department: 'Technology',
       students: 22,
