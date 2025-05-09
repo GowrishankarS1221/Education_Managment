@@ -331,6 +331,10 @@ const DashboardHome = ({ user }) => {
                         <td>
                           
                         </td>
+                         <td>
+                          <button className="btn btn-sm btn-outline-primary me-1">View</button>
+                          <button className="btn btn-sm btn-outline-secondary">Notes</button>
+                        </td>
                         
                       </tr>
                       <tr>
