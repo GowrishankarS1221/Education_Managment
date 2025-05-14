@@ -1,0 +1,103 @@
+.academics-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.quarter-section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.quarter-title {
+  color: #2c3e50;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.quarter-dates {
+  font-size: 0.9rem;
+  color: #666;
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+.events-list {
+  margin-top: 15px;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.event-item:hover {
+  background-color: #f8f9fa;
+}
+
+.event-date {
+  min-width: 120px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.event-name {
+  color: #666;
+  flex-grow: 1;
+}
+
+.holidays-section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.holidays-section h3 {
+  color: #2c3e50;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.holiday-item {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.holiday-item:hover {
+  background-color: #f8f9fa;
+}
+
+.holiday-date {
+  display: block;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: 4px;
+}
+
+.holiday-occasion {
+  display: block;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .event-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .event-date {
+    margin-bottom: 4px;
+  }
+}

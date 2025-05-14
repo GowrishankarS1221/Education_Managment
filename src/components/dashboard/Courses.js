@@ -5,43 +5,38 @@ const Courses = () => {
   const [courses, setCourses] = useState([
     {
       id: 1,
-      title: 'Mathematics ',
+      title: 'Grade 8 ',
       instructor: 'Mrs. Sarah Johnson',
       department: 'Mathematics',
       students: 32,
-      status: 'active'
     },
     {
       id: 2,
-      title: 'English Literature ',
+      title: 'Grade 9 ',
       instructor: 'Mr. Robert Williams',
       department: 'English',
       students: 28,
-      status: 'active'
     },
     {
       id: 3,
-      title: 'Physics ',
+      title: 'Grade 10 ',
       instructor: 'Dr. Michael Chen',
       department: 'Science',
       students: 24,
-      status: 'active'
     },
     {
       id: 4,
-      title: 'World History',
+      title: '  Grade 11',
       instructor: 'Ms. Emily Rodriguez',
       department: 'Social Studies',
       students: 35,
-      status: 'active'
     },
     {
       id: 5,
-      title: 'Computer Science ',
+      title: 'Grade 12 ',
       instructor: 'Mr. David Kumar',
-      department: 'Technology',
+      department: 'Language',
       students: 22,
-      status: 'inactive'
     }
   ]);
 
@@ -66,14 +61,7 @@ const Courses = () => {
               <option value="Technology">Technology</option>
             </select>
           </div>
-          <div className="col-md-3">
-            <select className="form-select">
-              <option value="">All Status</option>
-              <option value="active">Active</option>
-              <option value="inactive">Inactive</option>
-            </select>
-          </div>
-          <div className="col-md-6">
+          <div className="col-md-9">
             <div className="input-group">
               <input 
                 type="text" 
@@ -97,8 +85,6 @@ const Courses = () => {
               <th>Teacher</th>
               <th>Department</th>
               <th>Students</th>
-              <th>Status</th>
-              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -109,21 +95,6 @@ const Courses = () => {
                 <td>{course.instructor}</td>
                 <td>{course.department}</td>
                 <td>{course.students}</td>
-                <td>
-                  <span className={`status-badge ${course.status}`}>
-                    {course.status === 'active' ? 'Active' : 'Inactive'}
-                  </span>
-                </td>
-                <td>
-                  <div className="action-buttons">
-                    <button className="btn btn-sm btn-outline-primary me-1">
-                      <i className="bi bi-pencil"></i>
-                    </button>
-                    <button className="btn btn-sm btn-outline-danger">
-                      <i className="bi bi-trash"></i>
-                    </button>
-                  </div>
-                </td>
               </tr>
             ))}
           </tbody>

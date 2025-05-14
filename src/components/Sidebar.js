@@ -34,6 +34,15 @@ const Sidebar = ({ user }) => {
             <i className="bi bi-house-door"></i> Dashboard
           </Link>
         </li>
+        
+        {/* Add Academics option for students */}
+        {user.role === 'student' && (
+          <li className={location.pathname === '/dashboard/academics' ? 'active' : ''}>
+            <Link to="/dashboard/academics">
+              <i className="bi bi-calendar3"></i> Academics
+            </Link>
+          </li>
+        )}
         <li className={location.pathname === '/dashboard/courses' ? 'active' : ''}>
           <Link to="/dashboard/courses">
             <i className="bi bi-book"></i> Courses

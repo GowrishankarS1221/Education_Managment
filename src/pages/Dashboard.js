@@ -4,9 +4,12 @@ import Sidebar from '../components/dashboard/Sidebar';
 import DashboardHome from '../components/dashboard/DashboardHome';
 import Courses from '../components/dashboard/Courses';
 import Students from '../components/dashboard/Students';
-import Reports from '../components/dashboard/Reports';
+import Assignment from '../components/dashboard/Assignment';
 import Settings from '../components/dashboard/Settings';
+import StudentCourses from '../components/dashboard/StudentCourses';
+import StudentReport from '../components/dashboard/StudentReport';
 import '../styles/Dashboard.css';
+import Academics from '../components/dashboard/Academics';
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
@@ -94,10 +97,13 @@ const Dashboard = () => {
         <div className="dashboard-main">
           <Routes>
             <Route path="/" element={<DashboardHome user={user} />} />
-            <Route path="/courses" element={<Courses />} />
-            <Route path="/students" element={<Students />} />
-            <Route path="/reports" element={<Reports />} />
-            <Route path="/settings" element={<Settings user={user} />} />
+            <Route path="/assignments/*" element={<Assignment />} />
+            <Route path="/courses/*" element={<Courses />} />
+            <Route path="/academics/*" element={<Academics />} />
+            <Route path="/my-courses/*" element={<StudentCourses />} />
+            <Route path="/students/*" element={<Students />} />
+            <Route path="/settings/*" element={<Settings user={user} />} />
+            <Route path="/reports/*" element={<StudentReport />} />
           </Routes>
         </div>
       </div>
