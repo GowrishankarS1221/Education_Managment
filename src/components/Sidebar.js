@@ -10,7 +10,7 @@ const Sidebar = ({ user }) => {
   const handleLogout = () => {
     localStorage.removeItem('isAuthenticated');
     localStorage.removeItem('user');
-    navigate('/signin');
+    navigate('/'); // Changed from '/signin' to '/' to redirect to landing page
   };
 
   return (
@@ -58,11 +58,14 @@ const Sidebar = ({ user }) => {
             <i className="bi bi-bar-chart"></i> Reports
           </Link>
         </li>
-        <li className={location.pathname === '/dashboard/settings' ? 'active' : ''}>
-          <Link to="/dashboard/settings">
-            <i className="bi bi-gear"></i> Settings
-          </Link>
-        </li>
+        
+        {user.role === 'student' && (
+          <li className={location.pathname === '/dashboard/settings' ? 'active' : ''}>
+            <Link to="/dashboard/settings">
+              <i className="bi bi-gear"></i> Settings
+            </Link>
+          </li>
+        )}
       </ul>
       
       <div className="sidebar-footer">

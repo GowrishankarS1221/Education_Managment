@@ -6,6 +6,8 @@ import './App.css';
 
 // Pages
 import LandingPage from './pages/LandingPage';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
@@ -21,6 +23,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         

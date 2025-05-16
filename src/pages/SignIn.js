@@ -94,7 +94,7 @@ const SignIn = () => {
               />
             </div>
 
-           /* <div className="mb-3 form-check">
+           <div className="mb-3 form-check">
               <input
                 type="checkbox"
                 className="form-check-input"
@@ -102,7 +102,7 @@ const SignIn = () => {
               />
               <label className="form-check-label" htmlFor="rememberMe">Remember me</label>
             </div>
-            */
+            
 
             <button type="submit" className="btn btn-primary w-100">Sign In</button>
           </form>

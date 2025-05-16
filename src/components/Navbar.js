@@ -62,14 +62,6 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link 
-                className={`nav-link ${location.pathname === '/academics' ? 'active' : ''}`} 
-                to="/academics"
-              >
-                Academics
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link 
                 className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`} 
                 to="/contact"
               >

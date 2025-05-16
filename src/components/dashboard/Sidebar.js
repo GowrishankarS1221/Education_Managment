@@ -23,7 +23,7 @@ const Sidebar = ({ user, isOpen, toggleSidebar }) => {
         </button>
       </div>
       
-      <div className="sidebar-user" onClick={() => navigate('/dashboard/settings')}>
+      <div className="sidebar-user">
         <div className="user-avatar" title={user?.name}>
           {user?.avatar ? (
             <img 
@@ -36,10 +36,24 @@ const Sidebar = ({ user, isOpen, toggleSidebar }) => {
           )}
         </div>
         {isOpen && (
-          <div className="user-info">
+          <div className="user-info dropdown">
             <div className="user-name" title={user?.name}>{user?.name || 'User'}</div>
             <div className="user-role" title={user?.role}>
               {user?.role ? user.role.charAt(0).toUpperCase() + user.role.slice(1) : 'Guest'}
+            </div>
+            <div className="dropdown-menu">
+              <Link to="/dashboard/profile" className="dropdown-item">
+                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100" alt="Profile" />
+                <span>Profile</span>
+              </Link>
+              <Link to="/dashboard/settings" className="dropdown-item">
+                <img src="https://images.unsplash.com/photo-1646617747566-b7e784435a7d?w=100" alt="Settings" />
+                <span>Settings</span>
+              </Link>
+              <button onClick={handleLogout} className="dropdown-item">
+                <img src="https://images.unsplash.com/photo-1646617747566-b7e784435a7d?w=100" alt="Sign Out" />
+                <span>Sign Out</span>
+              </button>
             </div>
           </div>
         )}
@@ -71,6 +85,12 @@ const Sidebar = ({ user, isOpen, toggleSidebar }) => {
               <NavLink to="/dashboard/academics" className="sidebar-menu-link">
                 <i className="bi bi-calendar3"></i>
                 <span>Academic Calendar</span>
+              </NavLink>
+            </li>
+            <li className="sidebar-menu-item">
+              <NavLink to="/dashboard/settings" className="sidebar-menu-link">
+                <i className="bi bi-gear"></i>
+                <span>Settings</span>
               </NavLink>
             </li>
           </>

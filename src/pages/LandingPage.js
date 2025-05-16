@@ -27,8 +27,8 @@ const LandingPage = () => {
                   <img src={heroImage} alt="Sunshine Valley School" className="img-fluid hero-image" />
                 ) : (
                   <div className="placeholder-image" style={{ 
-                    height: '12cm',
-                    width: '10cm',
+                    height: '20cm',
+                    width: '30cm',
                     background: '#f0f0f0', 
                     display: 'flex',
                     alignItems: 'center',
@@ -153,9 +153,6 @@ const LandingPage = () => {
               <h5>Quick Links</h5>
               <ul className="list-unstyled">
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Academics</a></li>
-                <li><a href="#">Admissions</a></li>
-                <li><a href="#">Calendar</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
             </div>
